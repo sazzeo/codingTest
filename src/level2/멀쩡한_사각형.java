@@ -25,7 +25,6 @@ public class 멀쩡한_사각형 {
 		double min = Math.min(w/gcf,  h/gcf);
 		long sum = 0;
 		
-		
 		int prev = -1;
 		//max-1만큼 반복
 		for(int i = 1 ;  i < max; i++) {
@@ -42,8 +41,6 @@ public class 멀쩡한_사각형 {
 			
 			
 		}
-		
-		
 		
 		return w*h-(sum*gcf);
 
