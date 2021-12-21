@@ -9,6 +9,8 @@ public class 멀쩡한_사각형 {
 		System.out.println(gcf(8,8));
 		//System.out.println(solution(w,h));
 		
+		
+		
 	}
 
 	public static long solution(long w, long h) {
