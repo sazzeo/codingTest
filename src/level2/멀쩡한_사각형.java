@@ -7,7 +7,7 @@ public class 멀쩡한_사각형 {
 		int w = 8, h = 8;
 		
 		System.out.println(gcf(8,8));
-		//System.out.println(solution(w,h));
+		System.out.println(solution(w,h));
 		
 		
 		
