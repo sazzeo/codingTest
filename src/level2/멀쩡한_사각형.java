@@ -11,6 +11,8 @@ public class 멀쩡한_사각형 {
 		
 		
 		
+		
+		
 	}
 
 	public static long solution(long w, long h) {
