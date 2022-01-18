@@ -2,35 +2,28 @@ package level1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Temp {
 
 	public static void main(String[] args) {
-
-		String dartResult = "000";
-		int[] res = { 0, 0, 0 };
-		int p = 0;
-
-		for (int i = 0; i < dartResult.length(); i++) {
-
-			char a = dartResult.charAt(i);
-			System.out.println("a:" + a + "  p:" + p);
-
-			if (a >= '0' && a <= '9') {
-				res[p] = a - '0';
-
-				if (a == '1' && dartResult.charAt(++i) == '0') {
-					res[p] = 10;
-				}
-
-				p++;
-
-			}
-
-		}
-
-		System.out.println(Arrays.toString(res));
+		
+		Map<String, int[]> person = new HashMap<>();
+		
+		int[] a = new int[1];
+		a[0] = 0;
+		person.put("지영", a);
+		
+		
+		int[] b = person.get("지영");
+		b[0]++;
+		
+		System.out.println(b);
+		System.out.println(person.get("지영")[0]);
+		
+		
 
 	}
 
