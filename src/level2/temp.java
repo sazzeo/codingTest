@@ -8,6 +8,8 @@ public class temp {
 	
 	public static void main(String[] args) {
 		
+		
+		
 		try {
 			System.out.println("에러테스트");
 			throw new Exception();
