@@ -1,6 +1,7 @@
 package level1;
 
 public class Three_strikes {
+
 	public static void main(String[] args) {
 		
 		System.out.println(solution(125));

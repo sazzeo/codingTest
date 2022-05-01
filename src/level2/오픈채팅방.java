@@ -1,6 +1,7 @@
 package level2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,7 @@ public class 오픈채팅방 {
 		String[] record = {"Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan","Change uid4567 Ryan1"};
 		
 		
-		solution2(record);
+		solution3(record);
 		
 		
 		
@@ -84,5 +85,59 @@ public class 오픈채팅방 {
     	String[] arr = {};
     	return arr;
     }
+    
+
+    public static String[] solution3(String[] record) {
+    	
+    	
+    	//log저장할 리스트
+    	List<List<String>> logList = new ArrayList<>();
+    	
+    	//아이디 저장할 map
+    	Map<String, String> idMap = new HashMap<>();
+    	
+    	for(String r : record) {
+    		
+    		String[] dataArr = r.split(" ");
+    		
+    		switch(dataArr[0]) {
+    		case "Enter" :
+    			idMap.put(dataArr[1], dataArr[2]);
+    			List<String> log = new ArrayList<>();
+    			log.add(dataArr[1]);
+    			log.add("님이 들어왔습니다.");
+    			logList.add(log);
+    			break;
+    		case "Change" :
+    			idMap.put(dataArr[1], dataArr[2]);
+    			
+    			break;
+    		case "Leave" :
+    			List<String> log2 = new ArrayList<>(0);
+    			log2.add(dataArr[1]);
+    			log2.add("님이 나갔습니다.");
+    			logList.add(log2);
+    			break;
+    		
+    		}
+    		
+    		
+    	}
+		
+		String res[] = new String[logList.size()];
+		int idx = 0;
+		for(List<String> log : logList) {
+			
+			String s = idMap.get(log.get(0))+log.get(1);
+			res[idx++] = s;
+			
+			
+		}
+		
+    	
+    	return res;
+    }
+    
+    
 
 }

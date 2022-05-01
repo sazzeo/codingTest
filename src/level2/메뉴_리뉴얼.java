@@ -3,6 +3,7 @@ package level2;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -88,8 +89,17 @@ public class 메뉴_리뉴얼 {
 	}
 	
 	
-	private void combination(Map<String, Boolean> map , int start , int n , int r) {
+	private void combination(List<String> list , int start , int n , int r) {
+		Map<String , Boolean> map = new LinkedHashMap<String, Boolean>();
+		for(String str : list) {
+			map.put(str, false);
+		}
 		
+		for(int i=0 ; i<list.size();i++) {
+			
+			
+			
+		}
 		
 		
 	}
