@@ -93,7 +93,7 @@ public class 오픈채팅방 {
     	//log저장할 리스트
     	List<List<String>> logList = new ArrayList<>();
     	
-    	//아이디 저장할 map
+    	//아이디 저장할 mapit 
     	Map<String, String> idMap = new HashMap<>();
     	
     	for(String r : record) {
