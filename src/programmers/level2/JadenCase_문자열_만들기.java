@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//완료
 public class JadenCase_문자열_만들기 {
 
 	public static void main(String[] args) {
