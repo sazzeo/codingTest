@@ -8,9 +8,9 @@ public class 주식가격 {
 
 	public static void main(String[] args) {
 
-		int[] prices = { 1, 2, 3, 2, 3 };
-
-		System.out.println(Arrays.toString(solution(prices)));
+		int[] prices = { 1, 2, 3, 2, 3 , 1 };
+		solution2(prices);
+	
 
 	}
 
@@ -42,5 +42,33 @@ public class 주식가격 {
 
 		return answer;
 	}
+	
+	
+	
+	//통과한 코드
+    public static int[] solution2(int[] prices) {
+
+        int[] answer = new int[prices.length];
+    	for(int i = 0 ; i < prices.length ; i++) {
+    		
+    		int n = 0;
+    		int idx = i;
+    		while(true) {
+    			idx++;
+    			if(idx >= prices.length) break;
+    			if(prices[i] <= prices[idx]) n++;
+    			else {
+    				n++;
+    				break;}
+    			
+    		}
+    		
+    		answer[i] = n ;
+    	}
+    	
+    	//System.out.println(Arrays.toString(answer));
+    	
+        return answer;
+    }
 
 }
